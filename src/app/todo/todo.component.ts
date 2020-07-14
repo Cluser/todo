@@ -15,10 +15,17 @@ export class TodoComponent implements OnInit {
   ngOnInit() {
     this.todoData = {
       new: [
+        { id: 0, title: 'Title', description: 'description', date: new Date()},
+        { id: 0, title: 'Title', description: 'description', date: new Date()},
         { id: 0, title: 'Title', description: 'description', date: new Date()}
       ],
-      inProgress: [],
-      done: []
+      inProgress: [
+        { id: 0, title: 'Title', description: 'description', date: new Date()},
+        { id: 0, title: 'Title', description: 'description', date: new Date()}
+      ],
+      done: [
+        { id: 0, title: 'Title', description: 'description', date: new Date()}
+      ]
     };
   }
 
