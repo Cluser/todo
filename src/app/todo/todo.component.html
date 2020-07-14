@@ -1,13 +1,13 @@
 <div id="todo">
   <div id="left-section">
-    <app-todo-list [elements]="todoData.new"></app-todo-list>
+    <app-todo-list [list]="todoData.new"></app-todo-list>
   </div>
 
   <div id="center-section">
-    <app-todo-list [elements]="todoData.inProgress"></app-todo-list>
+    <app-todo-list [list]="todoData.inProgress"></app-todo-list>
   </div>
 
   <div id="right-section">
-    <app-todo-list [elements]="todoData.done"></app-todo-list>
+    <app-todo-list [list]="todoData.done"></app-todo-list>
   </div>
 </div>

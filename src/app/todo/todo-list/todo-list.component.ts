@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ITodoElement } from './../../shared/models';
+import { ITodoList } from './../../shared/models';
 
 @Component({
   selector: 'app-todo-list',
@@ -8,12 +8,12 @@ import { ITodoElement } from './../../shared/models';
 })
 export class TodoListComponent implements OnInit {
 
-  @Input() elements: ITodoElement[];
+  @Input() list: ITodoList;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.elements);
+    console.log(this.list.elements);
   }
 
 }

@@ -1,5 +1,6 @@
 <div id="todo-list">
-  <div class="todo-element" *ngFor="let element of elements">
+  <div id="todo-list-name">{{list.name}}</div>
+  <div class="todo-element" *ngFor="let element of list.elements">
     <app-todo-element [element]="element"></app-todo-element>
   </div>
 </div>

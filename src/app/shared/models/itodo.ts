@@ -1,7 +1,7 @@
-import { ITodoElement } from './';
+import { ITodoList } from './';
 
 export interface ITodo {
-    new: ITodoElement[];
-    inProgress: ITodoElement[];
-    done: ITodoElement[];
+    new: ITodoList;
+    inProgress: ITodoList;
+    done: ITodoList;
 }
