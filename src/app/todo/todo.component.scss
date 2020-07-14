@@ -1,0 +1,25 @@
+#todo {
+    width: 100%;
+    height: 100%;
+}
+
+#left-section {
+    position: absolute;
+    left: calc(100% * 0 / 3);
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+#center-section {
+    position: absolute;
+    left: calc(100% * 1 / 3);
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+#right-section {
+    position: absolute;
+    left: calc(100% * 2 / 3);
+    width: calc(100% / 3);
+    height: 100%;
+}
