@@ -1,5 +1,8 @@
+@import "../../shared/styles/global.scss";
+
 #todo-element {
     width: 100%;
     height: 100%;
-    background-color: coral;
+    background-color: $neutralDark;
+    color: $accent;
 }

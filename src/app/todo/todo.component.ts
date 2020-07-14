@@ -18,24 +18,24 @@ export class TodoComponent implements OnInit {
         name: 'New',
         elements:
         [
+          // { id: 0, title: 'Title', description: 'description', date: new Date()},
           { id: 0, title: 'Title', description: 'description', date: new Date()},
-          { id: 0, title: 'Title', description: 'description', date: new Date()},
-          { id: 0, title: 'Title', description: 'description', date: new Date()}
+          // { id: 0, title: 'Title', description: 'description', date: new Date()}
         ]
       },
       inProgress: {
         name: 'In progress',
         elements:
         [
-          { id: 0, title: 'Title', description: 'description', date: new Date()},
-          { id: 0, title: 'Title', description: 'description', date: new Date()}
+          // { id: 0, title: 'Title', description: 'description', date: new Date()},
+          // { id: 0, title: 'Title', description: 'description', date: new Date()}
         ]
       },
       done: {
         name: 'Done',
         elements:
         [
-          { id: 0, title: 'Title', description: 'description', date: new Date()}
+          // { id: 0, title: 'Title', description: 'description', date: new Date()}
         ]
       }
     };
