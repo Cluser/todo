@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITodo } from '../shared/models';
 
 @Component({
   selector: 'app-todo',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
+  public todoData: ITodo;
+
   constructor() { }
 
   ngOnInit() {
+    this.todoData = {
+      new: [
+        { id: 0, title: 'Title', description: 'description', date: new Date()}
+      ],
+      inProgress: [],
+      done: []
+    };
   }
 
 }

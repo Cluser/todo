@@ -13,6 +13,7 @@ export class TodoListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.elements);
   }
 
 }
