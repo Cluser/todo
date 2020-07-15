@@ -1,11 +1,10 @@
 @import "../../shared/styles/global.scss";
 
 #todo-element {
+    position: relative;
     width: 100%;
     height: 100%;
     background-color: $neutralDark;
-    color: $accent;
-    font-family: $headingFont;
 
     -webkit-box-shadow: 10px 10px 38px -17px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 38px -17px rgba(0,0,0,0.75);
@@ -14,9 +13,22 @@
 
 #todo-element-title {
     text-align: center;
+    color: $accentGood;
+    font-family: $headingFont;
+    font-size: 120%;
     background-color: $neutralTheDarkest;
 }
 
 #todo-element-description {
     text-align: center; 
+    color: $neutralTheLightest;
+    font-family: $regularFont;
+    font-size: 100%;
+}
+
+#todo-element-date {
+    text-align: center;
+    color: $neutralTheLightest;
+    font-family: $regularFont;
+    font-size: 70%;
 }
