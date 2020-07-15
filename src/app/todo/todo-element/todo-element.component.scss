@@ -5,4 +5,18 @@
     height: 100%;
     background-color: $neutralDark;
     color: $accent;
+    font-family: $headingFont;
+
+    -webkit-box-shadow: 10px 10px 38px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 38px -17px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 38px -17px rgba(0,0,0,0.75);
+}
+
+#todo-element-title {
+    text-align: center;
+    background-color: $neutralTheDarkest;
+}
+
+#todo-element-description {
+    text-align: center; 
 }
