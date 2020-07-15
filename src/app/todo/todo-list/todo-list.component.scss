@@ -6,15 +6,31 @@
 }
 
 #todo-list-name {
-    width: 100%;
+    position: relative;
+    width: 98%;
     height: 2%;
     text-align: center;
+    font-family: $headingFont;
     background: $neutralTheDarkest;
     color: $neutralTheLightest;
+    margin-left: 1%;
+}
+
+#todo-element-add {
+    position: absolute;
+    right: 1%;
+    top: 0%;
+    color: $accentGood;
+    cursor: pointer;
+}
+
+#todo-element-add:hover {
+    color: $accentGoodHover;
 }
 
 .todo-element {
     width: 98%;
     height: 19.6%;
-    padding: 1%;
+    padding-top: 1%;
+    margin-left: 1%;
 }

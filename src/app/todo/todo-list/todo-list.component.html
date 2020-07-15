@@ -1,5 +1,11 @@
 <div id="todo-list">
-  <div id="todo-list-name">{{list.name}}<fa-icon [icon]="faPlusSquare"></fa-icon></div>
+  <div id="todo-list-name">
+    {{list.name}}
+    <div id="todo-element-add">
+      <fa-icon [icon]="faPlusSquare"></fa-icon>
+    </div>
+  </div>
+
   <div class="todo-element" *ngFor="let element of list.elements">
     <app-todo-element [element]="element"></app-todo-element>
   </div>
