@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ITodoList } from './../../shared/models';
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-todo-list',
@@ -9,6 +10,8 @@ import { ITodoList } from './../../shared/models';
 export class TodoListComponent implements OnInit {
 
   @Input() list: ITodoList;
+
+  faPlusSquare = faPlusSquare;
 
   constructor() { }
 
