@@ -12,11 +12,28 @@
 }
 
 #todo-element-title {
+    position: relative;
     text-align: center;
-    color: $accentGood;
+    color: $neutralDarkMedium;
     font-family: $headingFont;
     font-size: 120%;
     background-color: $neutralTheDarkest;
+}
+
+#todo-element-edit {
+    position: absolute;
+    right: 4%;
+    top: 0%;
+    font-size: 90%;
+    color: $neutralDarkMedium;
+}
+
+#todo-element-remove {
+    position: absolute;
+    right: 1%;
+    top: 0%;
+    font-size: 90%;
+    color: $neutralDarkMedium;
 }
 
 #todo-element-description {

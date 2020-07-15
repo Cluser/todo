@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ITodoElement } from './../../shared/models';
+import { faEdit, faMinusSquare } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-todo-element',
@@ -9,6 +10,9 @@ import { ITodoElement } from './../../shared/models';
 export class TodoElementComponent implements OnInit {
 
   @Input() element: ITodoElement;
+
+  faEdit = faEdit;
+  faMinusSquare = faMinusSquare;
 
   constructor() { }
 
