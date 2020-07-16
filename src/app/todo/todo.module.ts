@@ -18,6 +18,8 @@ import { TodoComponent } from './todo.component';
     CommonModule,
     SharedModule,
     TodoRoutingModule
+  ],
+  entryComponents: [
   ]
 })
 export class TodoModule { }

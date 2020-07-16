@@ -1,0 +1,7 @@
+<ngx-smart-modal #addTodoElementModal identifier="addTodoElementModal">
+  <input type="text" [(ngModel)]="todoElement.title">
+  <input type="text" [(ngModel)]="todoElement.description">
+
+  <button id="add-todo-button" (click)="addTodo()">Add todo</button>
+  <button id="close-modal-button" (click)="closeModal()">Close</button>
+</ngx-smart-modal>

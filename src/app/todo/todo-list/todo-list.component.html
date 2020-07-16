@@ -1,7 +1,7 @@
 <div id="todo-list">
   <div id="todo-list-name">
-    {{list.name}}
-    <div id="todo-element-add">
+    {{list.name}} 
+    <div id="todo-element-add" (click)="openAddElementModal()">
       <fa-icon [icon]="faPlusSquare"></fa-icon>
     </div>
   </div>
@@ -10,3 +10,7 @@
     <app-todo-element [element]="element"></app-todo-element>
   </div>
 </div>
+
+
+<!-- Modal window -->
+<app-add-todo-element-modal></app-add-todo-element-modal>

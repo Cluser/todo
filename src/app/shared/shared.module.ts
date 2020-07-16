@@ -1,15 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { AddTodoElementModalComponent } from './modals/add-todo-element-modal/add-todo-element-modal.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AddTodoElementModalComponent
+  ],
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FormsModule,
+    FontAwesomeModule,
+    NgxSmartModalModule
   ],
   exports: [
-    FontAwesomeModule
+    FormsModule,
+    FontAwesomeModule,
+    NgxSmartModalModule,
+    AddTodoElementModalComponent
   ]
 })
-export class SharedModule { }
+
+export class SharedModule {
+  static forRoot() {
+    return {
+      ngModule: SharedModule,
+      providers: []
+    };
+  }
+}
