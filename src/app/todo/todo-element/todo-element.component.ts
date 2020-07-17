@@ -26,7 +26,7 @@ export class TodoElementComponent implements OnInit {
 
   openRemoveTodoElementModal(): void {
     this.removeTodoElementModal = this.bsModalService.show(RemoveTodoElementModalComponent, { ignoreBackdropClick: true });
-    this.removeTodoElementModal.content.onTodoRemove.subscribe(() => { console.log('element removed' + this.element.title); this.elementRemove.emit(this.element); });
+    this.removeTodoElementModal.content.onTodoRemove.subscribe(() => { this.elementRemove.emit(this.element); });
   }
 
 }
