@@ -2,6 +2,7 @@ import { ITodoElement } from './../../shared/models/itodo-element';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faEdit, faMinusSquare } from '@fortawesome/free-solid-svg-icons';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { EditTodoElementModalComponent } from './../../shared/modals/edit-todo-element-modal/edit-todo-element-modal.component';
 import { RemoveTodoElementModalComponent } from 'src/app/shared/modals/remove-todo-element-modal/remove-todo-element-modal.component';
 
 
@@ -17,11 +18,19 @@ export class TodoElementComponent implements OnInit {
 
   private faEdit = faEdit;
   private faMinusSquare = faMinusSquare;
+  private editTodoElementModal: BsModalRef;
   private removeTodoElementModal: BsModalRef;
+  
 
   constructor(private bsModalService: BsModalService) { }
 
   ngOnInit() {
+  }
+
+  openEditTodoElementModal(): void {
+    this.editTodoElementModal = this.bsModalService.show(EditTodoElementModalComponent, { ignoreBackdropClick: true });
+    this.editTodoElementModal.content.todoElement = {...this.element};
+    this.editTodoElementModal.content.onTodoAdd.subscribe((todoElement) => { this.element = todoElement; });
   }
 
   openRemoveTodoElementModal(): void {

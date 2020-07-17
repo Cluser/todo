@@ -5,11 +5,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AddTodoElementModalComponent } from './modals/add-todo-element-modal/add-todo-element-modal.component';
 import { RemoveTodoElementModalComponent } from './modals/remove-todo-element-modal/remove-todo-element-modal.component';
+import { EditTodoElementModalComponent } from './modals/edit-todo-element-modal/edit-todo-element-modal.component';
 
 @NgModule({
   declarations: [
     AddTodoElementModalComponent,
-    RemoveTodoElementModalComponent
+    RemoveTodoElementModalComponent,
+    EditTodoElementModalComponent
   ],
   imports: [
     CommonModule,
@@ -22,11 +24,13 @@ import { RemoveTodoElementModalComponent } from './modals/remove-todo-element-mo
     FontAwesomeModule,
     NgxSmartModalModule,
     AddTodoElementModalComponent,
-    RemoveTodoElementModalComponent
+    RemoveTodoElementModalComponent,
+    EditTodoElementModalComponent
   ],
   entryComponents: [
     AddTodoElementModalComponent,
-    RemoveTodoElementModalComponent
+    RemoveTodoElementModalComponent,
+    EditTodoElementModalComponent
   ]
 })
 
