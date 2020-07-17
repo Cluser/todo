@@ -15,6 +15,8 @@ $accentAttention: #eeeb29;
 $accentAttentionHover: #fffb2c; 
 $accentCritical:#e02932;
 $accentCriticalHover: #ff2c37;
+$accentNormal: #1520c4;
+$accentNormalHover: #1926da;
 
 
 // Fonts
@@ -23,8 +25,7 @@ $regularFont: TISA;
 
 
 // Buttons
-.button-good {
-    background-color: $accentGood; 
+.button {
     border: none;
     color: white;
     padding: 15px 32px;
@@ -32,6 +33,11 @@ $regularFont: TISA;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.button-good {
+    @extend .button;
+    background-color: $accentGood; 
 }
 
 .button-good:hover {
@@ -39,18 +45,30 @@ $regularFont: TISA;
 }
 
 .button-bad {
+    @extend .button;
     background-color: $accentCritical;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
 }
 
 .button-bad:hover {
     background-color: $accentCriticalHover; 
+}
+
+.button-bad {
+    @extend .button;
+    background-color: $accentCritical;
+}
+
+.button-bad:hover {
+    background-color: $accentCriticalHover; 
+}
+
+.button-normal {
+    @extend .button;
+    background-color: $accentNormal;
+}
+
+.button-normal:hover {
+    background-color: $accentNormalHover; 
 }
 
 

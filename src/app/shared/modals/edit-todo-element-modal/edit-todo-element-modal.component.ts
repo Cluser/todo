@@ -30,7 +30,7 @@ export class EditTodoElementModalComponent implements OnInit {
     this.bsModalRef.hide();
   }
 
-  addTodoElement(): void {
+  editTodoElement(): void {
     this.onTodoAdd.next(this.todoElement);
     this.closeModal();
   }

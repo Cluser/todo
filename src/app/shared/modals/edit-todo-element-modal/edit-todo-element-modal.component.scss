@@ -1,0 +1,36 @@
+@import "../../../shared/styles/global.scss";
+
+.modal-header {
+    background-color: $neutralDark;
+    color: $neutralTheLightest;
+    border: transparent;
+    border-radius: 0;
+}
+  
+.close {
+    color: $neutralTheLightest;
+}
+
+.modal-body {
+    background-color: $neutralLight;
+    color: $neutralTheLightest;
+}
+
+#todo-title-input {
+    @extend .modal-input;
+    width: 100%;
+    background-color: $neutralDark;
+    margin-bottom: 2%;
+}
+
+#todo-description-input {
+    @extend .modal-input;
+    width: 100%;
+    background-color: $neutralDark;
+}
+
+#todo-edit-button {
+    @extend .button-normal;
+    width: 100%;
+    margin-top: 4%;
+}
