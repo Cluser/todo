@@ -10,7 +10,7 @@
       <label>Title</label>
       <input id="todo-title-input" type="text" [(ngModel)]="todoElement.title">
       <label>Description</label>
-      <input id="todo-description-input" type="text" [(ngModel)]="todoElement.description">
+      <textarea id="todo-description-input" [(ngModel)]="todoElement.description" rows="4" cols="50"></textarea>
       <button id="todo-add-button" type="button" (click)="addTodoElement()">Add ToDo element</button>
     </div>
   </div>
