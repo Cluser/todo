@@ -25,6 +25,7 @@ import { RemoveTodoElementModalComponent } from './modals/remove-todo-element-mo
     RemoveTodoElementModalComponent
   ],
   entryComponents: [
+    AddTodoElementModalComponent,
     RemoveTodoElementModalComponent
   ]
 })

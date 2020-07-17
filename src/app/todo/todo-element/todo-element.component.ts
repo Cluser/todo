@@ -19,7 +19,7 @@ export class TodoElementComponent implements OnInit {
   private faMinusSquare = faMinusSquare;
   private removeTodoElementModal: BsModalRef;
 
-  constructor(private bsModalService: BsModalService ) { }
+  constructor(private bsModalService: BsModalService) { }
 
   ngOnInit() {
   }

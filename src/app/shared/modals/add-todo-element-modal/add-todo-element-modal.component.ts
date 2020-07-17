@@ -1,6 +1,7 @@
-import { ITodoElement } from './../../models/itodo-element';
 import { Component, OnInit } from '@angular/core';
-import { NgxSmartModalService } from 'ngx-smart-modal';
+import { BsModalRef } from 'ngx-bootstrap/modal';
+import { Subject } from 'rxjs';
+import { ITodoElement } from './../../models/itodo-element';
 
 @Component({
   selector: 'app-add-todo-element-modal',
@@ -9,16 +10,14 @@ import { NgxSmartModalService } from 'ngx-smart-modal';
 })
 export class AddTodoElementModalComponent implements OnInit {
 
-  private todoElement: ITodoElement;
-  private addTodoElementModalName = 'addTodoElementModal';
+  public onTodoAdd: Subject<ITodoElement>;
+  public todoElement: ITodoElement;
 
-  constructor(private ngxSmartModalService: NgxSmartModalService) { }
+  constructor(public bsModalRef: BsModalRef) { }
 
   ngOnInit() {
-    this.clearData();
-  }
+    this.onTodoAdd = new Subject();
 
-  public clearData() {
     this.todoElement = {
       id: null,
       title: null,
@@ -27,14 +26,12 @@ export class AddTodoElementModalComponent implements OnInit {
     };
   }
 
-  public closeModal() {
-    this.ngxSmartModalService.close(this.addTodoElementModalName);
-    this.clearData();
+  closeModal(): void {
+    this.bsModalRef.hide();
   }
 
-  public addTodo() {
-    this.ngxSmartModalService.resetModalData(this.addTodoElementModalName);
-    this.ngxSmartModalService.setModalData(this.todoElement, this.addTodoElementModalName);
+  addTodoElement(): void {
+    this.onTodoAdd.next(this.todoElement);
     this.closeModal();
   }
 }

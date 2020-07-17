@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ITodoList } from './../../shared/models';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
-import { NgxSmartModalService } from 'ngx-smart-modal';
-import { Subscription } from 'rxjs';
 import { ITodoElement } from './../../shared/models/itodo-element';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { AddTodoElementModalComponent } from './../../shared/modals/add-todo-element-modal/add-todo-element-modal.component';
 
 @Component({
   selector: 'app-todo-list',
@@ -15,31 +15,17 @@ export class TodoListComponent implements OnInit {
   @Input() list: ITodoList;
 
   private faPlusSquare = faPlusSquare;
-  private addTodoElementModalName = 'addTodoElementModal';
-  private addTodoElementModalCloseSubscribtion: Subscription;
+  private addTodoElementModal: BsModalRef;
 
-  constructor(public ngxSmartModalService: NgxSmartModalService) {
+  constructor(private bsModalService: BsModalService ) {
   }
 
   ngOnInit(): void {
   }
 
-  openAddElementModal(): void {
-    this.ngxSmartModalService.resetModalData(this.addTodoElementModalName);
-    this.ngxSmartModalService.getModal(this.addTodoElementModalName).open();
-    this.subscribeToModalClose();
-  }
-
-  subscribeToModalClose(): void {
-    this.addTodoElementModalCloseSubscribtion = this.ngxSmartModalService.getModal(this.addTodoElementModalName).onClose.subscribe(() => {
-      const todoElement = this.ngxSmartModalService.getModalData(this.addTodoElementModalName);
-      if (todoElement) { this.list.elements.push(todoElement); }
-      this.unsubscribeFromModalClose();
-    });
-  }
-
-  unsubscribeFromModalClose(): void {
-    this.addTodoElementModalCloseSubscribtion.unsubscribe();
+  openAddTodoElementModal(): void {
+    this.addTodoElementModal = this.bsModalService.show(AddTodoElementModalComponent, { ignoreBackdropClick: true });
+    this.addTodoElementModal.content.onTodoAdd.subscribe((todoElement) => { this.list.elements.push(todoElement); });
   }
 
   handleElementRemove(todoElement: ITodoElement): void {

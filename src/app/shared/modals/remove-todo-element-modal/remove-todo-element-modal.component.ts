@@ -19,7 +19,6 @@ export class RemoveTodoElementModalComponent implements OnInit {
   }
 
   closeModal(): void {
-
     this.bsModalRef.hide();
   }
 
