@@ -20,6 +20,13 @@
     @extend .modal-input;
     width: 100%;
     background-color: $neutralDark;
+    margin-bottom: 2%;
+}
+
+#todo-description-input {
+    @extend .modal-input;
+    width: 100%;
+    background-color: $neutralDark;
 }
 
 #todo-add-button {
