@@ -1,8 +1,9 @@
-import { Component, OnInit, Input, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ITodoList } from './../../shared/models';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 import { NgxSmartModalService } from 'ngx-smart-modal';
 import { Subscription } from 'rxjs';
+import { ITodoElement } from './../../shared/models/itodo-element';
 
 @Component({
   selector: 'app-todo-list',
@@ -39,5 +40,9 @@ export class TodoListComponent implements OnInit {
 
   unsubscribeFromModalClose(): void {
     this.addTodoElementModalCloseSubscribtion.unsubscribe();
+  }
+
+  handleElementRemove(todoElement: ITodoElement): void {
+    this.list.elements = this.list.elements.filter((element) => element !== todoElement);
   }
 }

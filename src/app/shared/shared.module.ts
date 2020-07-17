@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AddTodoElementModalComponent } from './modals/add-todo-element-modal/add-todo-element-modal.component';
+import { RemoveTodoElementModalComponent } from './modals/remove-todo-element-modal/remove-todo-element-modal.component';
 
 @NgModule({
   declarations: [
-    AddTodoElementModalComponent
+    AddTodoElementModalComponent,
+    RemoveTodoElementModalComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,11 @@ import { AddTodoElementModalComponent } from './modals/add-todo-element-modal/ad
     FormsModule,
     FontAwesomeModule,
     NgxSmartModalModule,
-    AddTodoElementModalComponent
+    AddTodoElementModalComponent,
+    RemoveTodoElementModalComponent
+  ],
+  entryComponents: [
+    RemoveTodoElementModalComponent
   ]
 })
 
