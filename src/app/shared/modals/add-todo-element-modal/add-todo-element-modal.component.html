@@ -5,9 +5,14 @@
   </button>
 </div>
 <div class="modal-body">
-  <input type="text" [(ngModel)]="todoElement.title">
+  <div class="row">
+    <div class="col">
+      <label>Title</label>
+      <input id="todo-title-input" type="text" [(ngModel)]="todoElement.title">
+      <button id="todo-add-button" type="button" (click)="addTodoElement()">Add ToDo element</button>
+    </div>
+  </div>
+
   
-  <button type="button" (click)="addTodoElement()">
-    Add ToDo element
-  </button>
+
 </div>

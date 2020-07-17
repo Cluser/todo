@@ -9,14 +9,38 @@ $neutralTheLightest: #e9e9e9;
 $primary: #fe346e;
 
 // Accent colors
-$accentGood: #30f815;
-$accentGoodHover: #46db32;
-$accentAttention: #fffb2c;
-$accentAttentionHover: #eeeb29;
-$accentCritical: #ff2c37;
-$accentCriticalHover: #e02932;
+$accentGood: #40c42f;
+$accentGoodHover: #40d82c;
+$accentAttention: #eeeb29;
+$accentAttentionHover: #fffb2c; 
+$accentCritical:#e02932;
+$accentCriticalHover: #ff2c37;
 
 
 // Fonts
 $headingFont: Roboto;
 $regularFont: TISA;
+
+
+// Buttons
+.button-good {
+    background-color: $accentGood; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-good:hover {
+    background-color: $accentGoodHover; /* Green */
+}
+
+
+.modal-input {
+    border: none;
+    color: $neutralTheLightest;
+}
+
