@@ -1,0 +1,23 @@
+@import "../../../shared/styles/global.scss";
+
+.modal-header {
+    background-color: $neutralDark;
+    color: $neutralTheLightest;
+    border: transparent;
+    border-radius: 0;
+}
+  
+.close {
+    color: $neutralTheLightest;
+}
+
+.modal-body {
+    background-color: $neutralLight;
+    color: $neutralTheLightest;
+}
+
+#todo-remove-button {
+    @extend .button-bad;
+    width: 100%;
+    margin-top: 4%;
+}

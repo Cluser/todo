@@ -24,7 +24,7 @@ $regularFont: TISA;
 
 // Buttons
 .button-good {
-    background-color: $accentGood; /* Green */
+    background-color: $accentGood; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -35,10 +35,27 @@ $regularFont: TISA;
 }
 
 .button-good:hover {
-    background-color: $accentGoodHover; /* Green */
+    background-color: $accentGoodHover;
+}
+
+.button-bad {
+    background-color: $accentCritical;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-bad:hover {
+    background-color: $accentCriticalHover; 
 }
 
 
+
+// Inputs
 .modal-input {
     border: none;
     color: $neutralTheLightest;

@@ -5,11 +5,12 @@
   </button>
 </div>
 <div class="modal-body">
-  Do you want to remove ToDo element?
-  <button type="button" (click)="removeTodoElement()">
-    Yes
-  </button>
-  <button type="button" (click)="closeModal()">
-    No
-  </button>
+  <div class="row">
+    <div class="col">
+      Do you want to remove ToDo element?
+      <button id="todo-remove-button" type="button" (click)="removeTodoElement()">
+        Yes
+      </button>
+    </div>
+  </div>
 </div>
