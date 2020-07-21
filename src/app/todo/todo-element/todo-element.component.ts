@@ -30,7 +30,12 @@ export class TodoElementComponent implements OnInit {
   openEditTodoElementModal(): void {
     this.editTodoElementModal = this.bsModalService.show(EditTodoElementModalComponent, { ignoreBackdropClick: true });
     this.editTodoElementModal.content.todoElement = {...this.element};
-    this.editTodoElementModal.content.onTodoAdd.subscribe((todoElement) => { this.element = todoElement; });
+    this.editTodoElementModal.content.onTodoAdd.subscribe((todoElement) => {
+      this.element.id = todoElement.id;
+      this.element.title = todoElement.title;
+      this.element.description = todoElement.description;
+      this.element.date = todoElement.date;
+    });
   }
 
   openRemoveTodoElementModal(): void {
