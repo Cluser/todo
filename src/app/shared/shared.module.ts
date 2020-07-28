@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -35,10 +35,10 @@ import { EditTodoElementModalComponent } from './modals/edit-todo-element-modal/
 })
 
 export class SharedModule {
-  static forRoot() {
+  static forRoot(): ModuleWithProviders<SharedModule> {
     return {
-      ngModule: SharedModule,
-      providers: []
+        ngModule: SharedModule,
+        providers: []
     };
-  }
+}
 }
