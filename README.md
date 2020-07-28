@@ -1,6 +1,6 @@
 # Todo
 
-Simple ToDo app built on Angular 9 framework.
+Simple ToDo app built on Angular 10 framework.
 
 
 ## Launching of project
