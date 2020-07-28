@@ -6,6 +6,7 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AddTodoElementModalComponent } from './modals/add-todo-element-modal/add-todo-element-modal.component';
 import { RemoveTodoElementModalComponent } from './modals/remove-todo-element-modal/remove-todo-element-modal.component';
 import { EditTodoElementModalComponent } from './modals/edit-todo-element-modal/edit-todo-element-modal.component';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { EditTodoElementModalComponent } from './modals/edit-todo-element-modal/
     CommonModule,
     FormsModule,
     FontAwesomeModule,
-    NgxSmartModalModule
+    NgxSmartModalModule,
+    NgScrollbarModule
   ],
   exports: [
     FormsModule,
     FontAwesomeModule,
     NgxSmartModalModule,
+    NgScrollbarModule,
     AddTodoElementModalComponent,
     RemoveTodoElementModalComponent,
     EditTodoElementModalComponent
