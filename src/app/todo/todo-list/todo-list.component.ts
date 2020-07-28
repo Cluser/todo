@@ -14,7 +14,7 @@ export class TodoListComponent implements OnInit {
 
   @Input() list: ITodoList;
 
-  private faPlusSquare = faPlusSquare;
+  public faPlusSquare = faPlusSquare;
   private addTodoElementModal: BsModalRef;
 
   constructor(private bsModalService: BsModalService ) {

@@ -16,8 +16,8 @@ export class TodoElementComponent implements OnInit {
   @Input() element: ITodoElement;
   @Output() elementRemove = new EventEmitter<ITodoElement>();
 
-  private faEdit = faEdit;
-  private faMinusSquare = faMinusSquare;
+  public faEdit = faEdit;
+  public faMinusSquare = faMinusSquare;
   private editTodoElementModal: BsModalRef;
   private removeTodoElementModal: BsModalRef;
   
