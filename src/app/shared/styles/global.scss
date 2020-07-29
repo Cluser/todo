@@ -11,12 +11,19 @@ $primary: #fe346e;
 // Accent colors
 $accentGood: #40c42f;
 $accentGoodHover: #40d82c;
+$accentGoodDisabled: #397731;
+
 $accentAttention: #eeeb29;
 $accentAttentionHover: #fffb2c; 
+$accentAttentionDisabled: #c4c13c; 
+
 $accentCritical:#e02932;
 $accentCriticalHover: #ff2c37;
+$accentCriticalDisabled: #a02d33;
+
 $accentNormal: #1520c4;
 $accentNormalHover: #1926da;
+$accentNormalDisabled: #2e3596;
 
 
 // Fonts
@@ -33,6 +40,7 @@ $regularFont: TISA;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .button-good {
@@ -44,13 +52,9 @@ $regularFont: TISA;
     background-color: $accentGoodHover;
 }
 
-.button-bad {
-    @extend .button;
-    background-color: $accentCritical;
-}
-
-.button-bad:hover {
-    background-color: $accentCriticalHover; 
+.button-good:disabled {
+    background-color: $accentGoodDisabled;
+    cursor: default;
 }
 
 .button-bad {
@@ -61,6 +65,12 @@ $regularFont: TISA;
 .button-bad:hover {
     background-color: $accentCriticalHover; 
 }
+
+.button-bad:disabled {
+    background-color: $accentCriticalDisabled; 
+    cursor: default;
+}
+
 
 .button-normal {
     @extend .button;
@@ -69,6 +79,11 @@ $regularFont: TISA;
 
 .button-normal:hover {
     background-color: $accentNormalHover; 
+}
+
+.button-normal:disabled {
+    background-color: $accentNormalDisabled; 
+    cursor: default;
 }
 
 

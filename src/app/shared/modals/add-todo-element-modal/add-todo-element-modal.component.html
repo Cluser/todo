@@ -7,11 +7,28 @@
 <div class="modal-body">
   <div class="row">
     <div class="col">
-      <label>Title</label>
-      <input id="todo-title-input" type="text" [(ngModel)]="todoElement.title">
-      <label>Description</label>
-      <textarea id="todo-description-input" [(ngModel)]="todoElement.description" rows="4" cols="50"></textarea>
-      <button id="todo-add-button" type="button" (click)="addTodoElement()">Add ToDo element</button>
+      <form (ngSubmit)="addTodoElement()" #createDeviceForm="ngForm">
+        <!-- Todo title input with validation-->
+        <label>Title</label>
+        <input id="todo-title-input" name="title" class="form-control" required [(ngModel)]="todoElement.title" #title="ngModel">
+        <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger">
+          <div *ngIf="title.errors.required">
+            Title is required.
+          </div>
+        </div>
+
+        <!-- Todo description input with validation-->
+        <label>Description</label>
+        <textarea id="todo-description-input" name="description" class="form-control" required [(ngModel)]="todoElement.description" #description="ngModel" rows="4" cols="50"></textarea>
+        <div *ngIf="description.invalid && (description.dirty || description.touched)" class="alert alert-danger">
+          <div *ngIf="description.errors.required">
+            Description is required.
+          </div>
+        </div>
+
+        <!-- Todo add button -->
+        <button id="todo-add-button" type="submit" [disabled]="!createDeviceForm.valid">Add ToDo element</button>
+      </form>
     </div>
   </div>
 </div>
