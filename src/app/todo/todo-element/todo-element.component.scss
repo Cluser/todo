@@ -6,7 +6,7 @@
     height: 100%;
     background-color: $neutralDark;
     overflow-wrap: break-word;
-    
+
     -webkit-box-shadow: 10px 10px 38px -17px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 38px -17px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 38px -17px rgba(0,0,0,0.75);
@@ -44,11 +44,4 @@
     color: $neutralTheLightest;
     font-family: $regularFont;
     font-size: 100%;
-}
-
-#todo-element-date {
-    text-align: center;
-    color: $neutralTheLightest;
-    font-family: $regularFont;
-    font-size: 70%;
 }

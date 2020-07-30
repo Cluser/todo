@@ -1,9 +1,8 @@
 <div id="todo-element">
-    <div id="todo-element-title">
+    <div id="todo-element-title" tooltip= "{{element.date | date:'medium'}}">
         {{element.title}}
         <div id="todo-element-edit" (click)="openEditTodoElementModal()"><fa-icon [icon]="faEdit"></fa-icon></div>
         <div id="todo-element-remove" (click)="openRemoveTodoElementModal()"><fa-icon [icon]="faMinusSquare"></fa-icon></div>
     </div>
     <div id="todo-element-description">{{element.description}}</div>
-    <div id="todo-element-date">{{element.date | date:'medium'}}</div>
 </div>
