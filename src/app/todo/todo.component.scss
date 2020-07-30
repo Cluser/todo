@@ -1,6 +1,7 @@
 @import "../shared/styles/global.scss";
 
 #todo {
+    @extend .noselect;
     width: 100%;
     height: 100%;
     background: $neutralLight;
