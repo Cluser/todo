@@ -31,6 +31,7 @@ export class AddTodoElementModalComponent implements OnInit {
   }
 
   addTodoElement(): void {
+    this.todoElement.date = new Date();
     this.onTodoAdd.next(this.todoElement);
     this.closeModal();
   }
