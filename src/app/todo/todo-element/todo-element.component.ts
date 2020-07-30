@@ -15,6 +15,7 @@ export class TodoElementComponent implements OnInit {
 
   @Input() element: ITodoElement;
   @Output() elementRemove = new EventEmitter<ITodoElement>();
+  @Output() elementEdited = new EventEmitter<void>();
 
   public faEdit = faEdit;
   public faMinusSquare = faMinusSquare;
@@ -35,6 +36,7 @@ export class TodoElementComponent implements OnInit {
       this.element.title = todoElement.title;
       this.element.description = todoElement.description;
       this.element.date = todoElement.date;
+      this.elementEdited.emit();
     });
   }
 

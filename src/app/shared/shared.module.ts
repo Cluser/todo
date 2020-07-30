@@ -9,6 +9,8 @@ import { EditTodoElementModalComponent } from './modals/edit-todo-element-modal/
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { TooltipModule, TooltipOptions } from 'ng2-tooltip-directive';
 import { TooltipModuleConfig } from './configs/tooltip-module-config';
+import { NgxIndexedDBModule } from 'ngx-indexed-db';
+import { dbConfig } from './configs/index-db-config';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { TooltipModuleConfig } from './configs/tooltip-module-config';
     FontAwesomeModule,
     NgxSmartModalModule,
     NgScrollbarModule,
-    TooltipModule.forRoot(TooltipModuleConfig as TooltipOptions)
+    TooltipModule.forRoot(TooltipModuleConfig as TooltipOptions),
+    NgxIndexedDBModule.forRoot(dbConfig)
   ],
   exports: [
     FormsModule,
@@ -30,6 +33,7 @@ import { TooltipModuleConfig } from './configs/tooltip-module-config';
     NgxSmartModalModule,
     NgScrollbarModule,
     TooltipModule,
+    NgxIndexedDBModule,
     AddTodoElementModalComponent,
     RemoveTodoElementModalComponent,
     EditTodoElementModalComponent

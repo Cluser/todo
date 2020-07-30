@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ITodoList } from './../../shared/models';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 import { ITodoElement } from './../../shared/models/itodo-element';
@@ -13,6 +13,7 @@ import { AddTodoElementModalComponent } from './../../shared/modals/add-todo-ele
 export class TodoListComponent implements OnInit {
 
   @Input() list: ITodoList;
+  @Output() listUpdated = new EventEmitter<void>();
 
   public faPlusSquare = faPlusSquare;
   private addTodoElementModal: BsModalRef;
@@ -25,10 +26,18 @@ export class TodoListComponent implements OnInit {
 
   openAddTodoElementModal(): void {
     this.addTodoElementModal = this.bsModalService.show(AddTodoElementModalComponent, { ignoreBackdropClick: true });
-    this.addTodoElementModal.content.onTodoAdd.subscribe((todoElement) => { this.list.elements.push(todoElement); });
+    this.addTodoElementModal.content.onTodoAdd.subscribe((todoElement) => {
+      this.list.elements.push(todoElement);
+      this.listUpdated.emit();
+    });
   }
 
   handleElementRemove(todoElement: ITodoElement): void {
     this.list.elements = this.list.elements.filter((element) => element !== todoElement);
+    this.listUpdated.emit();
+  }
+
+  handleElementEdited(): void {
+    this.listUpdated.emit();
   }
 }
