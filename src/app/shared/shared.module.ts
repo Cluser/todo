@@ -11,6 +11,8 @@ import { TooltipModule, TooltipOptions } from 'ng2-tooltip-directive';
 import { TooltipModuleConfig } from './configs/tooltip-module-config';
 import { NgxIndexedDBModule } from 'ngx-indexed-db';
 import { dbConfig } from './configs/index-db-config';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { DragAndDropService } from './functions/drag-and-drop.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { dbConfig } from './configs/index-db-config';
     NgxSmartModalModule,
     NgScrollbarModule,
     TooltipModule.forRoot(TooltipModuleConfig as TooltipOptions),
-    NgxIndexedDBModule.forRoot(dbConfig)
+    NgxIndexedDBModule.forRoot(dbConfig),
+    DragDropModule
   ],
   exports: [
     FormsModule,
@@ -34,6 +37,7 @@ import { dbConfig } from './configs/index-db-config';
     NgScrollbarModule,
     TooltipModule,
     NgxIndexedDBModule,
+    DragDropModule,
     AddTodoElementModalComponent,
     RemoveTodoElementModalComponent,
     EditTodoElementModalComponent
@@ -49,7 +53,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModule> {
     return {
         ngModule: SharedModule,
-        providers: []
+        providers: [DragAndDropService]
     };
 }
 }

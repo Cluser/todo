@@ -4,6 +4,8 @@ import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 import { ITodoElement } from './../../shared/models/itodo-element';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { AddTodoElementModalComponent } from './../../shared/modals/add-todo-element-modal/add-todo-element-modal.component';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
+import { DragAndDropService } from './../../shared/functions/drag-and-drop.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -18,7 +20,7 @@ export class TodoListComponent implements OnInit {
   public faPlusSquare = faPlusSquare;
   private addTodoElementModal: BsModalRef;
 
-  constructor(private bsModalService: BsModalService ) {
+  constructor(private bsModalService: BsModalService, private dragAndDropService: DragAndDropService) {
   }
 
   ngOnInit(): void {
@@ -39,5 +41,9 @@ export class TodoListComponent implements OnInit {
 
   handleElementEdited(): void {
     this.listUpdated.emit();
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    this.dragAndDropService.drop(event);
   }
 }

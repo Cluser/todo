@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -19,7 +20,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     SharedModule.forRoot(),
     NgxSmartModalModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
