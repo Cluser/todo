@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Subject } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class RemoveTodoElementModalComponent implements OnInit {
 
   public onTodoRemove: Subject<boolean>;
 
-  constructor(public bsModalRef: BsModalRef) { }
+  constructor(public bsModalRef: BsModalRef, private toastrService: ToastrService) { }
 
   ngOnInit() {
     this.onTodoRemove = new Subject();
@@ -24,6 +25,7 @@ export class RemoveTodoElementModalComponent implements OnInit {
 
   removeTodoElement(): void {
     this.onTodoRemove.next(true);
+    this.toastrService.success('ToDo has been succesfully removed', 'ToDo removed')
     this.closeModal();
   }
 

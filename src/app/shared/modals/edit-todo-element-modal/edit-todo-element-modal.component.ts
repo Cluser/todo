@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Subject } from 'rxjs';
 import { ITodoElement } from '../../models/itodo-element';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-edit-todo-element-modal',
@@ -13,7 +14,7 @@ export class EditTodoElementModalComponent implements OnInit {
   public onTodoAdd: Subject<ITodoElement>;
   public todoElement: ITodoElement;
 
-  constructor(public bsModalRef: BsModalRef) { }
+  constructor(public bsModalRef: BsModalRef, private toastrService: ToastrService) { }
 
   ngOnInit() {
     this.onTodoAdd = new Subject();
@@ -32,6 +33,7 @@ export class EditTodoElementModalComponent implements OnInit {
 
   editTodoElement(): void {
     this.onTodoAdd.next(this.todoElement);
+    this.toastrService.success('ToDo has been succesfully edited', 'ToDo edited');
     this.closeModal();
   }
 }

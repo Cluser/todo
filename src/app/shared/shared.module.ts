@@ -13,6 +13,9 @@ import { NgxIndexedDBModule } from 'ngx-indexed-db';
 import { dbConfig } from './configs/index-db-config';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragAndDropService } from './functions/drag-and-drop.service';
+import { ToastrModule } from 'ngx-toastr';
+import { toastrConfig } from './configs/toastr-config';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { DragAndDropService } from './functions/drag-and-drop.service';
     NgScrollbarModule,
     TooltipModule.forRoot(TooltipModuleConfig as TooltipOptions),
     NgxIndexedDBModule.forRoot(dbConfig),
+    ToastrModule.forRoot(toastrConfig),
     DragDropModule
   ],
   exports: [
@@ -37,6 +41,7 @@ import { DragAndDropService } from './functions/drag-and-drop.service';
     NgScrollbarModule,
     TooltipModule,
     NgxIndexedDBModule,
+    ToastrModule,
     DragDropModule,
     AddTodoElementModalComponent,
     RemoveTodoElementModalComponent,
