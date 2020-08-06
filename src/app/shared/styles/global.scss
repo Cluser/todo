@@ -94,6 +94,15 @@ $regularFont: TISA;
     color: $neutralTheLightest;
 }
 
+.modal-input.ng-dirty.ng-valid {
+    border: solid 1px;
+    border-color: $accentGood;
+}
+
+.modal-input.ng-dirty.ng-invalid {
+    border: solid 1px;
+    border-color: $accentCritical;
+}
 
 
 // Others
