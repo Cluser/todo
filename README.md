@@ -5,9 +5,9 @@ Simple ToDo app built on Angular 10 framework.
 
 ## Images
 
-![alt text](https://i.imgur.com/cr4olPD.jpg)
-
 ![alt text](https://i.imgur.com/UeuN7cA.jpg)
+
+![alt text](https://i.imgur.com/cr4olPD.jpg)
 
 ## What you can find here?
 
