@@ -1,6 +1,8 @@
 
 # Todo
 
+![alt text](https://imgur.com/UeuN7cA)
+
 Simple ToDo app built on Angular 10 framework.
 
 ## What you can find here?
@@ -12,7 +14,6 @@ Simple ToDo app built on Angular 10 framework.
 - Drag and drop
 - Toast notifications
 - Dark mode styling
-
 
 ## Launching of project
 
