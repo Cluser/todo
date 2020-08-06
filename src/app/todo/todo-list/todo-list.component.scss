@@ -28,6 +28,10 @@
     color: $accentGoodHover;
 }
 
+#todo-element-add:active {
+    transform: translateY(1px);
+}
+
 
 .todo-element {
     width: 97%;

@@ -30,6 +30,14 @@
     cursor: pointer;
 }
 
+#todo-element-edit:hover {
+    color: $neutralDarkMediumHover;
+}
+
+#todo-element-edit:active {
+    transform: translateY(1px);
+}
+
 #todo-element-remove {
     position: absolute;
     right: 1%;
@@ -38,6 +46,19 @@
     color: $neutralDarkMedium;
     cursor: pointer;
 }
+
+#todo-element-remove:hover {
+    color: $neutralDarkMediumHover;
+}
+
+#todo-element-remove:active {
+    color: translateY(1px);
+}
+
+#todo-element-remove:active {
+    transform: translateY(1px);
+}
+
 
 #todo-element-description {
     text-align: center; 
