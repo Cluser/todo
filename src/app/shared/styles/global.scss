@@ -104,6 +104,11 @@ $regularFont: TISA;
     border-color: $accentCritical;
 }
 
+.modal-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 
 // Others
 .noselect {
