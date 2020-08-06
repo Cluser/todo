@@ -3,6 +3,15 @@
 
 Simple ToDo app built on Angular 10 framework.
 
+## What you can find here?
+
+- CRUD operations
+- IndexedDB handling
+- Validations
+- Modals
+- Drag and drop
+- Toast notifications
+
 
 ## Launching of project
 
