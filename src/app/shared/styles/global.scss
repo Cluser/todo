@@ -43,6 +43,15 @@ $regularFont: TISA;
     cursor: pointer;
 }
 
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    outline: none;
+    transform: translateY(1px);
+}
+
 .button-good {
     @extend .button;
     background-color: $accentGood; 
@@ -94,7 +103,7 @@ $regularFont: TISA;
     color: $neutralTheLightest;
 }
 
-.modal-input.ng-dirty.ng-valid {
+.modal-input.ng-valid {
     border: solid 1px;
     border-color: $accentGood;
 }
