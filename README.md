@@ -11,6 +11,7 @@ Simple ToDo app built on Angular 10 framework.
 - Modals
 - Drag and drop
 - Toast notifications
+- Dark mode styling
 
 
 ## Launching of project
