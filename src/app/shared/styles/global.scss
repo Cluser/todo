@@ -95,6 +95,18 @@ $regularFont: TISA;
     cursor: default;
 }
 
+// Close button
+.close {
+    color: $neutralTheLightest;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.close:active {
+    outline: none;
+    transform: translateY(1px);
+}
+
 
 
 // Inputs
