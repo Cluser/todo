@@ -45,5 +45,6 @@ export class TodoListComponent implements OnInit {
 
   drop(event: CdkDragDrop<string[]>) {
     this.dragAndDropService.drop(event);
+    this.listUpdated.emit();
   }
 }
