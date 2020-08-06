@@ -1,4 +1,4 @@
-<div id="todo-list">
+<div id="todo-list" cdkDropList [cdkDropListData]="list.elements" (cdkDropListDropped)="drop($event)">
   <div id="todo-list-name">
     {{list.name}} 
     <div id="todo-element-add" (click)="openAddTodoElementModal()">
@@ -6,9 +6,10 @@
     </div>
   </div>
 
-  <ng-scrollbar cdkDropList [cdkDropListData]="list.elements" (cdkDropListDropped)="drop($event)">
+  <ng-scrollbar>
     <div class="todo-element" *ngFor="let element of list.elements" cdkDrag>
       <app-todo-element [element]="element" (elementRemove)="handleElementRemove($event)" (elementEdited)="handleElementEdited()"></app-todo-element>
+      <app-todo-element class="my-preview" [element]="element" (elementRemove)="handleElementRemove($event)" (elementEdited)="handleElementEdited()" *cdkDragPreview ></app-todo-element>
     </div>
   </ng-scrollbar>
 </div>
