@@ -27,21 +27,19 @@ Simple ToDo app built on Angular 10 framework.
 
 ## Launching of project
 
-Run `npm start` then navigate to `http://localhost:4200/`.
-
-# Clone this repository
+> ##### Clone this repository
 $ git clone https://github.com/saadpasta/developerFolio.git
 
-# Go into the repository
+> ##### Go into the repository
 $ cd todo
 
-# Install dependencies
+> ##### Install dependencies
 $ npm install
 
-# Start's development server
+> ##### Start's development server
 $ npm start
 
-# Navigate to `http://localhost:4200/
+> ##### Navigate to http://localhost:4200/
 
 ## Technologies
 
