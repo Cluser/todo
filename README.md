@@ -28,16 +28,16 @@ Simple ToDo app built on Angular 10 framework.
 ## Launching of project
 
 > ##### Clone this repository
-$ git clone https://github.com/saadpasta/developerFolio.git
+> $ git clone https://github.com/saadpasta/developerFolio.git
 
 > ##### Go into the repository
-$ cd todo
+> $ cd todo
 
 > ##### Install dependencies
-$ npm install
+> $ npm install
 
 > ##### Start's development server
-$ npm start
+> $ npm start
 
 > ##### Navigate to http://localhost:4200/
 
