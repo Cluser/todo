@@ -38,7 +38,7 @@ Simple ToDo app built on Angular 10 framework.
 >
 > ##### Start's development server
 > $ npm start
-
+>
 > ##### Navigate to http://localhost:4200/
 
 ## Technologies
