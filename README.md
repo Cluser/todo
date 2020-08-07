@@ -27,7 +27,7 @@ Run `npm start` then navigate to `http://localhost:4200/`.
 $ git clone https://github.com/saadpasta/developerFolio.git
 
 # Go into the repository
-$ cd developerFolio
+$ cd todo
 
 # Install dependencies
 $ npm install
