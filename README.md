@@ -4,7 +4,7 @@
 Simple ToDo app built on Angular 10 framework.
 
 ## Demo
-https://stackblitz.com/github/cluser/todo
+https://parigxwmk.github.stackblitz.io
 
 ## What you can find here?
 
