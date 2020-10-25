@@ -3,6 +3,9 @@
 
 Simple ToDo app built on Angular 10 framework.
 
+## Demo
+https://stackblitz.com/github/cluser/todo
+
 ## What you can find here?
 
 :white_check_mark: CRUD operations
