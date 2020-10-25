@@ -5,13 +5,19 @@ Simple ToDo app built on Angular 10 framework.
 
 ## What you can find here?
 
-- CRUD operations
-- IndexedDB handling
-- Validations
-- Modals
-- Drag and drop
-- Toast notifications
-- Dark mode styling
+:white_check_mark: CRUD operations
+
+:white_check_mark: IndexedDB handling
+
+:white_check_mark: Validations
+
+:white_check_mark: Modals
+
+:white_check_mark: Drag and drop
+
+:white_check_mark: Toast notifications
+
+:white_check_mark: Dark mode styling
 
 ## Images
 
@@ -21,7 +27,19 @@ Simple ToDo app built on Angular 10 framework.
 
 ## Launching of project
 
-Run `npm start` then navigate to `http://localhost:4200/`.
+  ##### Clone this repository
+  > $ git clone https://github.com/Cluser/todo.git
+
+  ##### Go into the repository
+  > $ cd todo
+
+  ##### Install dependencies
+  > $ npm install
+
+  ##### Start's development server
+  > $ npm start
+
+  ##### Navigate to http://localhost:4200/
 
 ## Technologies
 
