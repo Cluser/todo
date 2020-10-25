@@ -3,8 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faEdit, faMinusSquare } from '@fortawesome/free-solid-svg-icons';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { EditTodoElementModalComponent } from './../../shared/modals/edit-todo-element-modal/edit-todo-element-modal.component';
-import { RemoveTodoElementModalComponent } from 'src/app/shared/modals/remove-todo-element-modal/remove-todo-element-modal.component';
-
+import { RemoveTodoElementModalComponent } from '../../shared/modals/remove-todo-element-modal/remove-todo-element-modal.component';
 
 @Component({
   selector: 'app-todo-element',
